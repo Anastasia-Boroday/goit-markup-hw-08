@@ -1,30 +1,32 @@
 :root {
-  --accent-color: #2196F3;
+  --accent-color: #2196f3;
   --primary-color: #757575;
   --header-logo-color: #000000;
-  --main-title-color:#212121;
+  --main-title-color: #212121;
   --hero-title-color: #ffffff;
   --footer-tel-mail-text-color: rgba(255, 255, 255, 0.6);
-  --hero-btn-color: #188CE8;
-  --background-about-icon: #F5F4FA;
+  --hero-btn-color: #188ce8;
+  --background-about-icon: #f5f4fa;
   --bg-overlay-work: rgba(47, 48, 58, 0.8);
-  --bg-overlay-filter:rgba(33, 150, 243, 0.9);
+  --bg-overlay-filter: rgba(33, 150, 243, 0.9);
   --bg-backdrop: rgba(0, 0, 0, 0.2);
-  --backdrop-btn:rgba(0, 0, 0, 0.1);
-  --social-icon: #AFB1B8;
-  --second-background-color:#F5F4FA;
-  --main-background-color: #2F303A;
-  --border-color: #ECECEC;
-  --border-color-filter: #EEEEEE;
-  --box-shadow-comand:0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  --modal-shadow:0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  --box-shadow:0px 4px 4px rgba(0, 0, 0, 0.15);
+  --backdrop-btn: rgba(0, 0, 0, 0.1);
+  --social-icon: #afb1b8;
+  --second-background-color: #f5f4fa;
+  --main-background-color: #2f303a;
+  --border-color: #ececec;
+  --border-color-filter: #eeeeee;
+  --box-shadow-comand: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --timer: 250ms;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
-  --btn-email:rgba(255, 255, 255, 0.3);
+  --btn-email: rgba(255, 255, 255, 0.3);
   --btn-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   --modal-border-color: rgba(33, 33, 33, 0.2);
-  --content-placeholder:rgba(117, 117, 117, 0.5);
+  --content-placeholder: rgba(117, 117, 117, 0.5);
 }
 
 body {
@@ -71,7 +73,6 @@ img {
 }
 
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -79,24 +80,30 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 450px;
+    width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 738px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 
 .section {
-  padding: 94px 0;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+  }
 }
 
 .backdrop {
@@ -630,31 +637,71 @@ img {
           box-shadow: var(--box-shadow);
 }
 
-.about__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .about__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-.about__item {
-  width: 270px;
+@media screen and (min-width: 480px) {
+  .about__item {
+    width: 450px;
+  }
+  .about__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.about__item:not(:nth-child(4n)) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .about__item {
+    width: 354px;
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__item {
+    width: 270px;
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .about__icon {
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 270px;
-  height: 120px;
   background-color: var(--background-about-icon);
   margin-bottom: 30px;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .about__icon {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__icon {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__icon {
+    width: 270px;
+  }
 }
 
 .about__pre-text {
@@ -665,6 +712,18 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-title-color);
+}
+
+@media screen and (min-width: 480px) {
+  .about__pre-text {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__pre-text {
+    text-align: left;
+  }
 }
 
 .about__text {
