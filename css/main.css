@@ -435,11 +435,25 @@ img {
 
 .logo {
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.09;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17px;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .adress {
@@ -1026,12 +1040,23 @@ img {
 }
 
 .footer--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer--container {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer--container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer--logo {
@@ -1043,8 +1068,16 @@ img {
   color: var(--hero-title-color);
 }
 
-.footer-nav__item:not(:last-child) {
-  margin-bottom: 9px;
+@media screen and (max-width: 1199px) {
+  .footer-nav__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-nav__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .adress--white {
