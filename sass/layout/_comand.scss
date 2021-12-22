@@ -2,31 +2,59 @@
   background-color: var(--second-background-color);
 }
 .comand__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  @include font(700, 36px, 1.17, 0.03em);
+  @include font(700, 28px, 1.17, 0.03em);
   font-style: normal;
   text-align: center;
 
   color: var(--main-title-color);
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17, 0.03em);
+  }
 }
+
 .comand__list {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 .comand__item {
   background-color: var(--hero-title-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--box-shadow-comand);
 
-  &:not(:nth-child(4n)) {
-    margin-right: 30px;
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
 .comand__box {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 .comand__name {
   margin-bottom: 10px;
@@ -47,7 +75,8 @@
 
 .social-network {
   display: flex;
-  padding: 0 32px;
+  // padding: 0 32px;
+  justify-content: center;
 }
 .social-network__item:not(:last-child) {
   margin-right: 10px;

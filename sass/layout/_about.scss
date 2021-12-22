@@ -8,12 +8,12 @@
 }
 
 .about__item {
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-    &:not(:last-child) {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 30px;
     }
   }
+
   @media screen and (min-width: $tablet) {
     width: 354px;
     flex-basis: calc(100% / 2 - 30px);
