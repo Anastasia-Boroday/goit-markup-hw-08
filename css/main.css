@@ -1080,6 +1080,12 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .adress-list {
+    margin-bottom: 60px;
+  }
+}
+
 .adress--white {
   color: var(--hero-title-color);
   -webkit-transition: color var(--timer) var(--cubic-bezier);
@@ -1101,8 +1107,10 @@ img {
 }
 
 /* --------------------------- */
-.join {
-  margin-left: 70px;
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+  }
 }
 
 .join__text {
@@ -1120,6 +1128,23 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .join__list {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join__list {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 .join__item:not(:last-child) {
@@ -1154,9 +1179,6 @@ img {
 
 .subscribe__text {
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1165,14 +1187,16 @@ img {
   color: var(--hero-title-color);
 }
 
-.subscribe__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   margin: 0px;
   padding: 0px;
@@ -1242,10 +1266,19 @@ img {
   color: var(--footer-tel-mail-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .subscribe__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
+}
+
 .subscribe__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 200px;
   height: 50px;
   margin: 0px;
@@ -1267,6 +1300,14 @@ img {
 
 .subscribe__btn:focus, .subscribe__btn:hover {
   background-color: var(--hero-btn-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscribe__icon {
