@@ -1,0 +1,34 @@
+.about__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about__item{
+    width: 270px;
+
+    &:not(:nth-child(4n)){
+        margin-right: 30px;
+    }
+    
+}
+.about__icon{
+    @extend %align-center;
+    width: 270px;
+    height: 120px;
+
+
+    background-color: var(--background-about-icon);
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.about__pre-text {
+    margin-bottom: 10px;
+
+    @include font(700, 14px, 1.14, 0.03em);
+
+    text-transform: uppercase;
+    color: var(--main-title-color);   
+}
+.about__text {
+    @include font(400, 14px, 1.71, 0.03em);
+}

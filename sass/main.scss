@@ -1,0 +1,25 @@
+@import './utils/varibles';
+@import './base/common';
+@import './base/reset';
+@import './utils/hidden';
+
+
+@import './components/container';
+@import './components/section';
+@import './components/modal';
+@import './components/logo';
+@import './components/adress';
+@import './utils/_placeholders';
+@import './utils/mixins';
+
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/work';
+@import './layout/comand';
+@import './layout/clients';
+@import './layout/footer';
+
+@import './layout/filter-btn';
+@import './layout/filter-container';
