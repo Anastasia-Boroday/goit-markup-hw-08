@@ -62,6 +62,7 @@
     margin-right: 10px;
 }
 .join__link{
+    display: flex;
     @extend %align-center;
     width: 44px;
     height: 44px;
@@ -126,6 +127,7 @@
     }
 }
 .subscribe__btn{
+    display: flex;
     @extend %align-center;
     width: 200px;
     height: 50px;

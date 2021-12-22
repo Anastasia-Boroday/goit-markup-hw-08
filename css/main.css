@@ -71,10 +71,28 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 .section {
@@ -424,9 +442,6 @@ img {
 }
 
 .about__icon, .work__text, .social-network__link, .clients__link, .join__link, .subscribe__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -632,6 +647,9 @@ img {
 }
 
 .about__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 270px;
   height: 120px;
   background-color: var(--background-about-icon);
@@ -687,6 +705,9 @@ img {
 }
 
 .work__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   width: 100%;
   left: 0;
@@ -772,6 +793,9 @@ img {
 }
 
 .social-network__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 44px;
   height: 44px;
   color: var(--social-icon);
@@ -820,6 +844,9 @@ img {
 }
 
 .clients__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 170px;
   height: 92px;
   border: 1px solid var(--social-icon);
@@ -915,6 +942,9 @@ img {
 }
 
 .join__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50% 50%;
@@ -1028,6 +1058,9 @@ img {
 }
 
 .subscribe__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 200px;
   height: 50px;
   margin: 0px;

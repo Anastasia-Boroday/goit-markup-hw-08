@@ -23,6 +23,7 @@
 }
 
 .work__text{
+    display: flex;
     @extend %align-center;
     position: absolute;
     width: 100%;
