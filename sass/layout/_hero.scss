@@ -1,61 +1,74 @@
 .hero {
-    text-align: center  ;
+  text-align: center;
 
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 200px 0;
+  max-width: 480px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 
-    background-color: var(--main-background-color); 
-    background-image:
-    linear-gradient( 
-        rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
+  background-color: var(--main-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
     url(../img/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media screen and (max-width: 1199px) {
+    padding: 118px 0;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: 768px;
+    height: 400px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__title {
-    margin: 0 auto 30px;
+  margin: 0 auto 30px;
 
-    width: 696px;  
+  width: 360px;
+  @include font(900, 26px, 1.62, 0.06em);
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--hero-title-color);
+
+  @media screen and (min-width: $desktop) {
+    width: 696px;
     @include font(900, 44px, 1.36, 0.06em);
-
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--hero-title-color);
+  }
 }
-.hero__btn {    
-    border-radius: 4px;
-    border: 0px;
-    min-width: 200px;   
-    padding: 10px 32px;
+.hero__btn {
+  border-radius: 4px;
+  border: 0px;
+  min-width: 200px;
+  padding: 10px 32px;
 
-    font-style: normal;
-    font-family: inherit;
+  font-style: normal;
+  font-family: inherit;
 
-    @include font(700, 16px, 1.87, 0.06em);
-    
-    align-items: center;
-    text-align: center;
- 
-    
-    color: var(--hero-title-color);
-    cursor: pointer;
-    background-color: var(--accent-color);
-  
-    transition: background-color var(--timer) var(--cubic-bezier),
+  @include font(700, 16px, 1.87, 0.06em);
+
+  align-items: center;
+  text-align: center;
+
+  color: var(--hero-title-color);
+  cursor: pointer;
+  background-color: var(--accent-color);
+
+  transition: background-color var(--timer) var(--cubic-bezier),
     box-shadow var(--timer) var(--cubic-bezier);
-    cursor: pointer;
+  cursor: pointer;
 
-    &:focus,
-    &:hover{
-        background-color: var(--hero-btn-color) ;
-        box-shadow: var(--box-shadow);
-    } 
+  &:focus,
+  &:hover {
+    background-color: var(--hero-btn-color);
+    box-shadow: var(--box-shadow);
+  }
 }
-
