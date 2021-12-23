@@ -16,7 +16,7 @@
   <!-- шапка страници-->
   <header class="header">
     <div class="header__container container">
-      <nav class="header__navigation">
+      <!-- <nav class="header__navigation">
         <a class="logo header--logo link" href="" lang="en">
           Web<span class="logo--black">Studio</span></a>
         <ul class="header__list list">
@@ -24,8 +24,9 @@
           <li class="header__item"><a class="header__link link" href="./portfolio.html">Портфолио</a></li>
           <li class="header__item"><a class="header__link link" href="">Контакты</a></li>
         </ul>
-      </nav>
-      <ul class="header-contacts list">
+      </nav> -->
+
+      <!-- <ul class="header-contacts list">
         <li class="header-contacts__item"><a class="header-contacts__link link" href="mailto:info@devstudio.com">
           <svg class="header-contacts__icon-convert">
             <use href="./img/icons.svg#convert"></use>
@@ -34,7 +35,18 @@
           <svg class="header-contacts__icon-smartphone">
             <use href="./img/icons.svg#smartphone"></use>
           </svg>+38 096 111 11 11</a></li>
-      </ul>
+      </ul> -->
+
+      <button class="header-btn-menu is-open" type="button">
+        <svg 
+        width="40" 
+        height="40" 
+        aria-label="переключатель мобильного меню">
+          <use class="header_icon-cross" href="./img/icons.svg#cross-1"></use>
+          <use class="header_icon-menu" href="./img/icons.svg#menu-1"></use>
+        </svg>
+ 
+      </button>
     </div>
   </header> 
   <main>
@@ -430,5 +442,6 @@
     </div>
   </div> 
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

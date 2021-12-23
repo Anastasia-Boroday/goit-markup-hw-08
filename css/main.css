@@ -499,6 +499,32 @@ img {
           align-items: center;
 }
 
+.header-btn-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header-btn-menu:hover, .header-btn-menu:focus {
+  color: var(--accent-color);
+}
+
+.header-btn-menu .header_icon-cross {
+  display: none;
+}
+
+.header-btn-menu.is-open .header_icon-cross {
+  display: block;
+}
+
+.header-btn-menu.is-open .header_icon-menu {
+  display: none;
+}
+
 .header--logo {
   margin-right: 93px;
   padding-top: 24px;
@@ -1218,7 +1244,8 @@ img {
 
 @media screen and (max-width: 1199px) {
   .subscribe__form {
-    display: block;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
 
