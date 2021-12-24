@@ -1560,7 +1560,7 @@ img {
   background-color: var(--hero-title-color);
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
   .filter__item:not(:last-child) {
     margin-bottom: 30px;
   }
