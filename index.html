@@ -152,11 +152,25 @@
         <h2 class="comand__title">Наша команда</h2>
         <ul class="comand__list list">
           <li class="comand__item">
-            <img 
-            src="./img/person1.jpg" 
-            alt="первый член команды" 
-            width="270" 
-            height="260">
+            <picture>
+              <source srcset="
+              ./img/comand/person1-desk-1x.jpg 1x, 
+              ./img/comand/person1-desk-2x.jpg 2x"
+              media="(min-width:1200px)"
+              />
+              <source srcset="
+              ./img/comand/person1-tab-1x.jpg 1x, 
+              ./img/comand/person1-tab-2x.jpg 2x" 
+              media="(min-width:768px)" />
+              <source srcset="
+              ./img/comand/person1-mob-1x.jpg 1x, 
+              ./img/comand/person1-mob-2x.jpg 2x" 
+              media="(min-width:320px)" />
+              <img 
+              src="./img/comand/person1-desk-1x.jpg" 
+              alt="первый член команды" 
+              >
+            </picture>
             <div class="comand__box">
               <h3 class="comand__name">Игорь Демьяненко</h3>
               <p class="comand__work" lang="en">Product Designer</p>
@@ -186,7 +200,18 @@
           </li>
 
           <li class="comand__item">
-            <img src="./img/person2.jpg" alt="второй член команды" width="270" height="260">
+            <picture>
+              <source srcset="
+              ./img/comand/person2-desk-1x.jpg 1x, 
+              ./img/comand/person2-desk-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="
+              ./img/comand/person2-tab-1x.jpg 1x, 
+              ./img/comand/person2-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="
+              ./img/comand/person2-mob-1x.jpg 1x, 
+              ./img/comand/person2-mob-2x.jpg 2x" media="(min-width:320px)" />
+              <img src="./img/comand/person2-desk-1x.jpg" alt="второй член команды">
+            </picture>
             <div class="comand__box">
               <h3 class="comand__name">Ольга Репина</h3>
               <p class="comand__work" lang="en">Frontend Developer</p>
@@ -216,7 +241,18 @@
           </li>
 
           <li class="comand__item">
-            <img src="./img/person3.jpg" alt="третий член команды" width="270" height="260">
+            <picture>
+              <source srcset="
+              ./img/comand/person3-desk-1x.jpg 1x, 
+              ./img/comand/person3-desk-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="
+              ./img/comand/person3-tab-1x.jpg 1x, 
+              ./img/comand/person3-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="
+              ./img/comand/person3-mob-1x.jpg 1x, 
+              ./img/comand/person3-mob-2x.jpg 2x" media="(min-width:320px)" />
+              <img src="./img/comand/person3-desk-1x.jpg" alt="третий член команды">
+            </picture>
             <div class="comand__box">
               <h3 class="comand__name">Николай Тарасов</h3>
               <p class="comand__work" lang="en">Marketing</p>
@@ -246,7 +282,18 @@
           </li>
 
           <li class="comand__item">
-            <img src="./img/person4.jpg" alt="четвертый член команды" width="270" height="260">
+            <picture>
+              <source srcset="
+              ./img/comand/person4-desk-1x.jpg 1x, 
+              ./img/comand/person4-desk-2x.jpg 2x" media="(min-width:1200px)" />
+              <source srcset="
+              ./img/comand/person4-tab-1x.jpg 1x, 
+              ./img/comand/person4-tab-2x.jpg 2x" media="(min-width:768px)" />
+              <source srcset="
+              ./img/comand/person4-mob-1x.jpg 1x, 
+              ./img/comand/person4-mob-2x.jpg 2x" media="(min-width:320px)" />
+              <img src="./img/comand/person4-desk-1x.jpg" alt="четвертый член команды">
+            </picture>
             <div class="comand__box">
               <h3 class="comand__name">Михаил Ермаков</h3>
               <p class="comand__work" lang="en">UI Designer</p>
