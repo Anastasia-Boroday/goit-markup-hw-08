@@ -102,8 +102,14 @@
   letter-spacing: 0.01em;
 
   color: var(--primary-color);
-  transition: border-color 250ms var(--cubic-bezier);
+  transition: border-color 250ms var(--cubic-bezier),
+    color 250ms var(--cubic-bezier);
   cursor: pointer;
+}
+.modal-form__input:focus + .modal-form__label {
+  @media screen and (max-width: 767px) {
+    color: var(--accent-color);
+  }
 }
 .modal-form__relative {
   position: relative;
