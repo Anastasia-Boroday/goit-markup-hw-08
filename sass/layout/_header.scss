@@ -10,9 +10,12 @@
   align-items: center;
 }
 .header__navigation {
-  // display: flex;
   display: none;
   align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .header--logo {
@@ -67,29 +70,41 @@
   }
 }
 .header-contacts {
-  // display: flex;
   display: none;
   margin-left: auto;
 
-  &__item + &__item {
-    margin-left: 50px;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding: 21px 0;
+    // &:not(:last-child) {
+    //   margin-bottom: 10px;
+    // }
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    &__item + &__item {
+      margin-left: 50px;
+    }
   }
 }
 .header-contacts__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   align-items: center;
 
   @include font(500, 14px, 1.14, 0.02em);
-
   color: var(--primary-color);
-
   transition: color var(--timer) var(--cubic-bezier);
 
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .header-contacts__icon-convert {
@@ -115,6 +130,9 @@
 
   border: none;
   background-color: transparent;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 .mob-menu {
   position: fixed;
@@ -124,6 +142,11 @@
   top: 0;
   z-index: 5;
   padding: 48px 40px;
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -142,6 +165,15 @@
   border: none;
   background-color: transparent;
 }
+.header_icon-cross {
+  fill: currentColor;
+  transition: fill 250ms var(--cubic-bezier);
+
+  .header-btn-cross:focus + & {
+    color: var(--accent-color);
+  }
+}
+
 .mob-menu__link {
   font-family: Roboto;
   @include font(500, 40px, calc(47 / 40), 0.02em);
