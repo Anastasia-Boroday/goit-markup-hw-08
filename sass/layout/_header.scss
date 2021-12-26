@@ -73,11 +73,12 @@
   display: none;
   margin-left: auto;
 
-  @media screen and (min-width: $tablet) and (max-width: 1199) {
+  @media screen and (min-width: $tablet) {
     display: block;
     padding: 21px 0;
   }
   @media screen and (min-width: $desktop) {
+    padding: 0 0;
     display: flex;
     &__item + &__item {
       margin-left: 50px;
