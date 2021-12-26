@@ -14,29 +14,69 @@
 </head>
 <body>
   <!-- шапка страници-->
-  <!-- <header class="header">
+  <header class="header">
     <div class="header__container container">
+      <a class="logo header--logo link" href="" lang="en">
+        Web<span class="logo--black">Studio</span></a>
       <nav class="header__navigation">
-        <a class="logo header--logo link" href="" lang="en">
-          Web<span class="logo--black">Studio</span></a>
         <ul class="header__list list">
           <li class="header__item"><a class="header__link link" href="./index.html">Студия</a></li>
-          <li class="header__item"><a class="header__link link current" href="">Портфолио</a></li>
+          <li class="header__item"><a class="header__link link current" href="./portfolio.html">Портфолио</a></li>
           <li class="header__item"><a class="header__link link" href="">Контакты</a></li>
         </ul>
       </nav>
+  
       <ul class="header-contacts list">
         <li class="header-contacts__item"><a class="header-contacts__link link" href="mailto:info@devstudio.com">
-          <svg class="header-contacts__icon-convert">
-            <use href="./img/icons.svg#convert"></use>
-          </svg>info@devstudio.com</a></li>
+            <svg class="header-contacts__icon-convert">
+              <use href="./img/icons.svg#convert"></use>
+            </svg>info@devstudio.com</a></li>
         <li class="header-contacts__item"><a class="header-contacts__link link" href="tel:+380961111111">
-          <svg class="header-contacts__icon-smartphone">
-            <use href="./img/icons.svg#smartphone"></use>
-          </svg>+38 096 111 11 11</a></li>
+            <svg class="header-contacts__icon-smartphone">
+              <use href="./img/icons.svg#smartphone"></use>
+            </svg>+38 096 111 11 11</a></li>
       </ul>
+  
+      <button class="header-btn-menu" type="button">
+        <svg width="40" height="40" aria-label="переключатель мобильного меню">
+          <use class="header_icon-menu" href="./img/icons.svg#menu-1"></use>
+        </svg>
+  
+      </button>
     </div>
-  </header> -->
+    <div class="mob-menu is-hidden">
+      <div class="container">
+        <div class="mob-menu-top">
+          <button class="header-btn-cross" type="button">
+            <svg width="40" height="40" aria-label="переключатель мобильного меню">
+              <use class="header_icon-cross" href="./img/icons.svg#cross-1"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu__item"><a class="mob-menu__link link " href="./index.html">Студия</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link link current" href="./portfolio.html">Портфолио</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link link" href="">Контакты</a></li>
+          </ul>
+  
+        </div>
+        <div class="mob-menu-bottom">
+          <ul class="mob-menu-contacts list">
+            <li class="mob-menu-contacts-1__item"><a class="mob-menu-contacts-1__link link"
+                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li class="mob-menu-contacts-2__item"><a class="mob-menu-contacts-2__link link" href="tel:+380961111111">+38
+                096 111 11 11</a></li>
+          </ul>
+          <ul class="mob-menu-network list">
+            <li class="mob-menu-network__item"><a class="mob-menu-network__link link" href="">Instagram</a></li>
+            <li class="mob-menu-network__item"><a class="mob-menu-network__link link" href="">Twitter</a></li>
+            <li class="mob-menu-network__item"><a class="mob-menu-network__link link" href="">Facebook</a></li>
+            <li class="mob-menu-network__item"><a class="mob-menu-network__link link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+  
+      </div>
+    </div>
+  </header>
   <!-- main страници -->
   <main>
       <!-- фильтр сепкция -->
@@ -391,6 +431,6 @@
       </div>
     </div>
   </footer>
-  
+  <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
