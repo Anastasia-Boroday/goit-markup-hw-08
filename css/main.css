@@ -745,12 +745,18 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  -webkit-transition: fill var(--timer) var(--cubic-bezier);
+  transition: fill var(--timer) var(--cubic-bezier);
 }
 
 @media screen and (min-width: 768px) {
   .header-btn-menu {
     display: none;
   }
+}
+
+.header-btn-menu:focus, .header-btn-menu:hover {
+  fill: var(--accent-color);
 }
 
 .mob-menu {
@@ -823,14 +829,8 @@ img {
   transition: color var(--timer) var(--cubic-bezier);
 }
 
-.header_icon-cross {
-  fill: currentColor;
-  -webkit-transition: fill 250ms var(--cubic-bezier);
-  transition: fill 250ms var(--cubic-bezier);
-}
-
-.header-btn-cross:focus + .header_icon-cross {
-  color: var(--accent-color);
+.header-btn-cross:focus, .header-btn-cross:hover {
+  fill: var(--accent-color);
 }
 
 .mob-menu__link {
@@ -1491,6 +1491,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-unit-information {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer-nav {
     margin-bottom: 60px;
@@ -1514,6 +1520,16 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer-nav__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.adress-list :not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .adress-list :not(:last-child) {
     margin-bottom: 9px;
   }
 }
@@ -1899,6 +1915,19 @@ img {
           transform: translateY(0);
 }
 
+@media screen and (min-width: 768px) {
+  .filter__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+}
+
 .filter-overlay {
   position: relative;
   overflow: hidden;
@@ -1917,16 +1946,25 @@ img {
   letter-spacing: 0.03em;
   color: var(--hero-title-color);
   background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: -webkit-transform var(--timer) var(--cubic-bezier);
   transition: -webkit-transform var(--timer) var(--cubic-bezier);
   transition: transform var(--timer) var(--cubic-bezier);
   transition: transform var(--timer) var(--cubic-bezier), -webkit-transform var(--timer) var(--cubic-bezier);
 }
 
+@media screen and (max-width: 768px) {
+  .filter-overlay__text {
+    overflow: auto;
+  }
+}
+
 .filter-box {
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .filter-box__title {

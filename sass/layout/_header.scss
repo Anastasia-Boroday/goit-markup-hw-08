@@ -163,8 +163,14 @@
 
   border: none;
   background-color: transparent;
+
+  transition: fill var(--timer) var(--cubic-bezier);
   @media screen and (min-width: $tablet) {
     display: none;
+  }
+  &:focus,
+  &:hover {
+    fill: var(--accent-color);
   }
 }
 .mob-menu {
@@ -216,13 +222,10 @@
   border: none;
   background-color: transparent;
   transition: color var(--timer) var(--cubic-bezier);
-}
-.header_icon-cross {
-  fill: currentColor;
-  transition: fill 250ms var(--cubic-bezier);
 
-  .header-btn-cross:focus + & {
-    color: var(--accent-color);
+  &:focus,
+  &:hover {
+    fill: var(--accent-color);
   }
 }
 

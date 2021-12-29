@@ -31,6 +31,7 @@
 }
 .filter__link {
   display: block;
+
   background-color: var(--hero-title-color);
   transition: box-shadow var(--timer) var(--cubic-bezier);
 
@@ -44,6 +45,11 @@
   &:hover .filter-overlay__text,
   &:focus .filter-overlay__text {
     transform: translateY(0);
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 .filter-overlay {
@@ -63,12 +69,16 @@
   color: var(--hero-title-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--timer) var(--cubic-bezier);
+  @media screen and (max-width: $tablet) {
+    overflow: auto;
+  }
 }
 
 .filter-box {
   padding: 20px 24px;
+  flex-grow: 1;
 }
 .filter-box__title {
   margin-bottom: 4px;
