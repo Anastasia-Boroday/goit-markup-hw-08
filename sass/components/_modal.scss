@@ -21,14 +21,17 @@
 
   left: 50%;
   top: 50%;
-
-  width: 450px;
-  height: 609px;
+  height: 98%;
+  width: 96%;
   padding: 40px;
 
   background-color: var(--hero-title-color);
   border-radius: 4px;
   box-shadow: var(--modal-shadow);
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    height: 609px;
+  }
 
   transform: scale(1) translate(-50%, -50%);
   @media screen and (min-width: $tablet) {
@@ -74,13 +77,16 @@
   margin-bottom: 12px;
 
   font-weight: 700;
-  font-size: 20px;
+
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
 
   color: var(--main-title-color);
 
+  @media screen and (min-width: $mobile) {
+    font-size: 20px;
+  }
   @media screen and (max-width: 1199px) {
     height: 60px;
   }
@@ -106,6 +112,7 @@
     color 250ms var(--cubic-bezier);
   cursor: pointer;
 }
+
 .modal-form__input:focus + .modal-form__label {
   @media screen and (max-width: 767px) {
     color: var(--accent-color);
@@ -237,11 +244,14 @@
 
 .modal-form__checkbox-text {
   font-weight: 400;
-  font-size: 12px;
+
   line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: var(--primary-color);
+  @media screen and (min-width: $mobile) {
+    font-size: 12px;
+  }
   @media screen and (min-width: $desktop) {
     font-weight: 400;
     font-size: 14px;

@@ -26,6 +26,11 @@
 }
 // ----------------------------------
 // problem with padding in logo
+.footer-nav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
 .footer--logo {
   display: block;
   margin-bottom: 20px;
@@ -41,12 +46,6 @@
     margin-bottom: 9px;
   }
 }
-.adress-list {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
-}
-
 .adress--white {
   color: var(--hero-title-color);
   transition: color var(--timer) var(--cubic-bezier);
@@ -69,6 +68,9 @@
 /* --------------------------- */
 
 .join {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: $tablet) {
     margin-left: 165px;
   }
@@ -90,9 +92,9 @@
   display: flex;
   justify-content: center;
 
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
+  // @media screen and (max-width: 767px) {
+  //   margin-bottom: 60px;
+  // }
 
   @media screen and (min-width: $desktop) {
     justify-content: left;
@@ -148,7 +150,6 @@
   }
 }
 .subscribe__input {
-  width: 450px;
   height: 50px;
   margin: 0px;
   padding: 0px;
@@ -163,6 +164,7 @@
   border-radius: 4px;
   background-color: transparent;
   color: var(--footer-tel-mail-text-color);
+  transition: background-color var(--timer) var(--cubic-bezier);
 
   &::placeholder {
     @include font(400, 16px, 1.25, 0.03em);
@@ -170,6 +172,9 @@
     align-items: center;
 
     color: var(--footer-tel-mail-text-color);
+  }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
   }
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;

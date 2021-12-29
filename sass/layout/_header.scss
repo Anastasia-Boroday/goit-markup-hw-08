@@ -90,20 +90,12 @@
 
   @media screen and (min-width: $tablet) {
     display: block;
-    padding: 21px 0;
   }
   @media screen and (min-width: $desktop) {
     padding: 0 0;
     display: flex;
     &__item + &__item {
       margin-left: 50px;
-    }
-  }
-}
-.header-contacts__item {
-  @media screen and (min-width: $tablet) and(max-width:1199px) {
-    &:not(:last-child) {
-      margin-bottom: 10px;
     }
   }
 }
@@ -134,6 +126,18 @@
     font-size: 14px;
     line-height: calc(14 / 16);
     letter-spacing: 0.02em;
+  }
+}
+.header-contacts__link1 {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-top: 21px;
+    margin-bottom: 5px;
+  }
+}
+.header-contacts__link2 {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-bottom: 21px;
+    margin-top: 5px;
   }
 }
 .header-contacts__icon-convert {
@@ -171,12 +175,20 @@
   top: 0;
   z-index: 5;
   padding: 48px 40px;
+
+  transition: opacity 600ms var(--cubic-bezier),
+    visibility 600ms var(--cubic-bezier);
+
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
   }
   .container {
+    @media screen and (max-width: $mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -190,6 +202,9 @@
     display: none;
   }
 }
+.mob-menu-top {
+  margin-bottom: 32px;
+}
 .header-btn-cross {
   position: absolute;
   display: inline-flex;
@@ -200,6 +215,7 @@
 
   border: none;
   background-color: transparent;
+  transition: color var(--timer) var(--cubic-bezier);
 }
 .header_icon-cross {
   fill: currentColor;
@@ -213,6 +229,7 @@
 .mob-menu__link {
   font-family: Roboto;
   @include font(500, 40px, calc(47 / 40), 0.02em);
+  transition: color var(--timer) var(--cubic-bezier);
 
   color: var(--main-title-color);
   &:hover,
@@ -235,27 +252,36 @@
 }
 .mob-menu-contacts-1__link {
   font-family: Roboto;
-  @include font(500, 34px, calc(40 / 34), 0.02em);
+  @include font(500, 8vw, calc(40 / 34), 0.02em);
   color: var(--primary-color);
+  transition: color var(--timer) var(--cubic-bezier);
 
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+  @media screen and (min-width: $mobile) {
+    @include font(500, 34px, calc(40 / 34), 0.02em);
+  }
 }
 .mob-menu-contacts-2__link {
   font-family: Roboto;
-  @include font(500, 24px, calc(28 / 24), 0.02em);
+  @include font(500, 6vw, calc(28 / 24), 0.02em);
+  transition: color var(--timer) var(--cubic-bezier);
 
   color: var(--primary-color);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: $mobile) {
+    @include font(500, 24px, calc(28 / 24), 0.02em);
   }
 }
 // ------------
 .mob-menu-network {
   display: flex;
+  flex-wrap: wrap;
 }
 .mob-menu-network__item {
   &:not(:last-child) {
