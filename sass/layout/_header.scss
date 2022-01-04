@@ -131,13 +131,13 @@
 .header-contacts__link1 {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     padding-top: 21px;
-    margin-bottom: 5px;
+    // margin-bottom: 5px;
   }
 }
 .header-contacts__link2 {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     padding-bottom: 21px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
 .header-contacts__icon-convert {
